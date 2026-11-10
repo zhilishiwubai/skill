@@ -1,0 +1,42 @@
+[
+  {
+    "file": "01-teaching-curves.png",
+    "title": "从CSV生成数据图",
+    "caption": "自编教学数据，规定斜率为2和3 N/mm；不是试验结果。",
+    "sha256": "3073918834285e9ec2d32b75ba3ba3e4ffb7fb2eeecec79ae1c0da4d379cbd99",
+    "media_type": "EXPORTED_FIGURE_NOT_UI_SCREENSHOT",
+    "rights": "SELF_AUTHORED_SYNTHETIC_TEACHING"
+  },
+  {
+    "file": "02-source-order.png",
+    "title": "数据保真：负值、重复点与逆序",
+    "caption": "保留每条曲线6个点和原始顺序；B1是未验证的教学参考。",
+    "sha256": "accebec5b01c4c4115d7a0ea27582451519de73a7171085b2d706f7a7dea3db2",
+    "media_type": "EXPORTED_FIGURE_NOT_UI_SCREENSHOT",
+    "rights": "SELF_AUTHORED_SYNTHETIC_TEACHING"
+  },
+  {
+    "file": "03-grayscale.png",
+    "title": "灰度下区分曲线",
+    "caption": "同一组数据保留实线/虚线编码；不据此宣称所有配色都通过灰度检查。",
+    "sha256": "06f0a21822e2486a39e9563d8e0bd8589d73925cb91e3f3582191f6f5ae6298f",
+    "media_type": "EXPORTED_FIGURE_NOT_UI_SCREENSHOT",
+    "rights": "SELF_AUTHORED_SYNTHETIC_TEACHING"
+  },
+  {
+    "file": "04-final-size.png",
+    "title": "在最终尺寸检查可读性",
+    "caption": "本例为120×85 mm；核查标签、图例及脚注。",
+    "sha256": "3b5c61b985cc0789aa4ae0c4d1a7fc3a54dafee72b3a9254f5c98a359548cb97",
+    "media_type": "EXPORTED_FIGURE_NOT_UI_SCREENSHOT",
+    "rights": "SELF_AUTHORED_SYNTHETIC_TEACHING"
+  },
+  {
+    "file": "05-reference-fixtures.jpg",
+    "title": "参考案例检索与阅读",
+    "caption": "四个自编夹具图，三张曲线经过实际查看；流程图保持UNREVIEWED。不是私人论文图库。",
+    "sha256": "5eeca31662003fbc23907d37c6207b506ac5db1a84abb4db5774e7933fa873b0",
+    "media_type": "EXPORTED_FIGURE_NOT_UI_SCREENSHOT",
+    "rights": "SELF_AUTHORED_SYNTHETIC_TEACHING"
+  }
+]

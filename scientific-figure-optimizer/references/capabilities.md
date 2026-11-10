@@ -33,3 +33,8 @@ Matplotlib supplies the rendering engine under its permissive license. Pillow su
 - https://pillow.readthedocs.io/en/stable/about.html
 - https://pypdf.readthedocs.io/en/stable/meta/license.html
 - https://docs.originlab.com/labtalk/ref/set-cmd/
+
+
+## 0.2.0-local 本地参考扩展
+
+科研制图任务现在先进行问题确认、相关案例检索、授权视觉查看、两来源规则采用和Figure Brief记录，再走原CSV流程。结构/机理/装置/流程只完成参考与方案，不新增绘图后端或Origin适配器。详见 [本地参考工作流](local-reference-library.md)。原严格v1绘图任务单保持独立；新增模板为assets/reference-*.json，私人案例库不随安装分发。

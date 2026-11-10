@@ -1,0 +1,65 @@
+{
+  "case_id": "LOCAL-001",
+  "resource_role": "VISUAL_REFERENCE",
+  "source_id": "LOCAL-WORK-1",
+  "figure_number": "1",
+  "page_1based": 1,
+  "source": {
+    "authors": "UNVERIFIED",
+    "year": null,
+    "title": "UNVERIFIED",
+    "locator_note": "Record source file/URL, PDF file page and caption; verify before inclusion"
+  },
+  "title": "Local reference to be reviewed",
+  "category": "structure",
+  "source_sha256": "COMPUTE_FROM_ORIGINAL",
+  "preview": "previews/LOCAL-001.png",
+  "preview_sha256": "COMPUTE_FROM_PREVIEW",
+  "page_preview": "pages/LOCAL-WORK-1-p001.png",
+  "duplicate_of": null,
+  "scientific_question": "RECORD_FROM_SOURCE",
+  "main_claim": "RECORD_SOURCE_CLAIM_WITH_LIMITS",
+  "comparison_and_evidence": {
+    "objects": "UNVERIFIED",
+    "evidence_type": "UNVERIFIED"
+  },
+  "layout": {
+    "panels_and_reading_order": "NOT_VISUALLY_REVIEWED",
+    "visual_focus": "NOT_VISUALLY_REVIEWED"
+  },
+  "visual_encoding": {
+    "font_hierarchy": "NOT_VERIFIED",
+    "colors": "NOT_VERIFIED_NO_EXACT_VALUES",
+    "lines_markers_legend": "NOT_VERIFIED",
+    "shape_meaning": "NOT_VERIFIED"
+  },
+  "borrow_rules": [],
+  "avoid": "RECORD_AFTER_ACTUAL_VIEW",
+  "applicable_to": [],
+  "not_applicable_to": [],
+  "mapping": {
+    "status": "NOT_APPLICABLE_REFERENCE_ONLY",
+    "specimen_id": null,
+    "data_file": null
+  },
+  "rights": {
+    "status": "UNVERIFIED_LOCAL_REFERENCE_ONLY",
+    "publication_authorized": false
+  },
+  "visual_review": {
+    "status": "UNREVIEWED",
+    "reviewer": null,
+    "method": null,
+    "preview_sha256": null,
+    "uncertainty": [
+      "Not yet actually viewed"
+    ]
+  },
+  "editability": {
+    "level": "IMAGE_REFERENCE",
+    "data_available": false,
+    "native_project": null,
+    "reopened_verified": false
+  },
+  "tags": []
+}

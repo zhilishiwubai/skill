@@ -1,0 +1,52 @@
+{
+  "scientific_problem": "Replace with actual scientific question and expression function",
+  "function": "curves",
+  "target_reader": "Research reader",
+  "figure_type": "CSV comparison plot",
+  "size_mm": [
+    120,
+    85
+  ],
+  "editing_requirement": "Editable SVG paths and text; not an Origin project",
+  "main_claim": "Replace with supported task claim",
+  "data_sources": [
+    {
+      "source": "Actual task data path",
+      "evidence_level": "UNVERIFIED",
+      "units": "Must be established, never inferred"
+    }
+  ],
+  "design": {
+    "layout": "Single common linear axes if supported",
+    "encoding": "Consistent line styles plus color for series identity",
+    "font": "Choose a portable, verified font and physical point size",
+    "colors": "Choose task palette, do not invent measured reference values",
+    "annotations": "Units, source and unverified boundaries",
+    "output_formats": [
+      "SVG",
+      "PDF",
+      "PNG"
+    ]
+  },
+  "adoptions": [
+    {
+      "case_id": "CASE-A",
+      "viewed_preview_sha256": "COPY_ONLY_AFTER_ACTUAL_VIEW",
+      "visual_observations": "Write task-specific observations after authorized viewing",
+      "rule_ids": [
+        "R1"
+      ],
+      "applied_to": "Explain concrete design effect"
+    },
+    {
+      "case_id": "CASE-B",
+      "viewed_preview_sha256": "COPY_ONLY_AFTER_ACTUAL_VIEW",
+      "visual_observations": "Second source work actually viewed",
+      "rule_ids": [
+        "R1"
+      ],
+      "applied_to": "Explain concrete design effect"
+    }
+  ],
+  "new_design": "Record task-specific geometry/data/layout; do not copy distinctive source content"
+}

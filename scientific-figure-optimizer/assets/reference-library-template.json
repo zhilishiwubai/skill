@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "roots": {
+    "papers": "D:/local-reference-sources"
+  },
+  "source_file": "sources.json",
+  "cards": "cards",
+  "scope": "LOCAL_ONLY_CONFIGURE_ROOT_BEFORE_USE"
+}

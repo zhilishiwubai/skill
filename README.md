@@ -1,72 +1,72 @@
-# 科研绘图 Skills
+# 科研制图 Skill
 
-本仓库收录可安装的科研工作流 skill。当前提供 **scientific-figure-optimizer 0.1.3**：将带单位和来源说明的 CSV 曲线数据转换为 SVG、PDF、PNG，并交付输入快照、任务单、绘图代码、依赖说明和核查记录。
+本仓库提供scientific-figure-optimizer 0.2.1-local：根据明确来源和单位的CSV绘制可复现数据图，并通过本地参考案例检索、实际看图与规则提炼生成Figure Brief。这里的学习是运行时参考，不是模型训练。
 
-## 能做什么
+## 当前能力
 
-- 共用线性坐标轴的1—3条曲线，保留全部输入数值、点数和点序。
-- 按任务单授权调整尺寸、字体、颜色、线型和显示范围。
-- 输出可编辑文字/路径的 SVG、带嵌入字体资源的 PDF、带尺寸/DPI信息的 PNG。
-- 重新读取导出文件，核对SVG顶点、参考线、PDF页面和字体、PNG像素与DPI、必要文件及哈希。
-- 将整次输出目录复制到其他位置，按其中的 REPRODUCE.md 独立重跑。
+| 能力 | 当前范围 |
+|---|---|
+| 数据图 | 共用线性坐标的1—3条CSV曲线；保留所有数值、点数和点序 |
+| 可编辑输出 | SVG文字与路径、PDF、PNG；交付数据/任务单/脚本/依赖与核查记录 |
+| 导出后核查 | 重新读取文件，检查SVG逐点/顺序/参考线，PDF页面与字体，PNG尺寸/DPI及哈希 |
+| 本地参考库 | 配置独立目录；按表达功能检索3—5例，实际查看后采用至少两个来源的规则 |
+| 结构/机理/流程 | 支持检索与方案；本包尚无相应绘制后端 |
+| Origin | 作者经代码审阅确认可用，本轮停止进一步复验；本包没有新增Origin可执行适配器 |
 
-不会自动平滑、删点、排序、重采样、换单位或移动参考边界。来源真实性、统计合理性、科学结论、版式美感和期刊要求需要人工确认。**当前正式后端是 Python/Matplotlib；Origin 原生路线未通过验收，不在安装包内。**
+![自编CSV教学图](scientific-figure-optimizer/docs/presentation-materials/01-teaching-curves.png)
 
-![自编教学数据示例](scientific-figure-optimizer/examples/expected-v0.1.3/spring/figure.png)
+## 安装与运行
 
-## 快速开始
-
-准备 Git 和 Python 3.12；私有仓库需要相应的 GitHub 访问权限。本次上传位于 scientific-figure-optimizer-v0.1.3 分支；PR合并到main后可省略下面的 --branch 参数。在 PowerShell 中运行：
+准备Python3.12和Git。本候选拟发布到scientific-figure-optimizer-v0.2.1分支，main与既有分支保持原状。
 
 ```powershell
-git clone --branch scientific-figure-optimizer-v0.1.3 https://github.com/zhilishiwubai/skill.git
+git clone --branch scientific-figure-optimizer-v0.2.1 https://github.com/zhilishiwubai/skill.git
 cd skill/scientific-figure-optimizer
 python --version
 python -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements-lock.txt
 .venv\Scripts\python.exe scripts/install_skill.py
-```
-
-安装器默认将资源放到 CODEX_HOME 下的 skills/scientific-figure-optimizer；未设置时使用用户目录中的 .codex。已有目标会被拒绝，更新前请先完整备份旧版。重新打开 Codex 会话以发现 skill。运行脚本时使用装好依赖的虚拟环境解释器。
-
-先运行自带公开案例：
-
-```powershell
 .venv\Scripts\python.exe scripts/figure.py check examples/spring.json
 .venv\Scripts\python.exe scripts/figure.py render examples/spring.json --out runs/my-first-figure
 .venv\Scripts\python.exe scripts/figure.py verify runs/my-first-figure
 ```
 
-每次使用全新输出目录。打开结果中的 figure.png、final-size.png 和 grayscale.png 检查裁切、遮挡、灰度线型、峰值与负值的可见性。自动检查通过不等于科学批准。
+已有Skill和输出目录会拒绝覆盖。依赖由虚拟环境提供；安装包不包含Python/Origin软件。更新Skill先备份旧目录，再运行安装器。
 
 ## 使用自己的数据
 
-1. 准备带唯一表头的 UTF-8 CSV，保留原件；明确各列单位、来源、证据等级及使用权。
-2. 复制 assets/brief-template.json，修改 input、列名、标签、单位、provenance、修改授权和验收问题。input 相对任务单所在目录解析；不要沿用与新数据不符的示例来源或公式。
-3. 依次执行 check、render、verify，最后打开实际图件并请作者核对科学含义。
-4. 交付整个输出文件夹；复制后按 REPRODUCE.md 重跑。自定义字体需要独立合法安装，并满足原字体哈希。
+1. 准备UTF-8 CSV，确认列名、单位、来源、证据等级和使用权，保留原件。
+2. 复制assets/brief-template.json，填写真实input、坐标、series和provenance。按任务写修改授权和验收问题，不沿用教学公式。
+3. 用check、render、verify生成到新目录。查看彩色、最终尺寸及灰度预览，核对科学含义。自动PASS不代表科学批准。
+4. 交付整个输出目录，按REPRODUCE.md重跑。不会自动平滑、删点、排序、重采样、改单位或移动参考边界。
 
-给 Agent 的请求示例：
+## 连接本地图片库
 
-> 使用 scientific-figure-optimizer 检查这份 CSV 和任务单，保留全部数值及点序，只执行获准的样式修改，在新目录交付 SVG/PDF/PNG、复现文件和核查记录，并列出仍需作者确认的问题。
+安装包只提供模板和工具。论文、研究照片、案例卡和本地目录映射应由使用者独立配置，不随本仓库分发。
 
-> Use scientific-figure-optimizer to check this CSV and brief, preserve all values and point order, apply only authorized styling, and deliver SVG/PDF/PNG with reproduction files and an audit in a new directory. Identify questions requiring author review.
+```powershell
+.venv\Scripts\python.exe scripts/reference_library.py --library <本地库目录> index --deep
+.venv\Scripts\python.exe scripts/reference_library.py --library <本地库目录> search --query "荷载位移对比" --function curves
+.venv\Scripts\python.exe scripts/reference_library.py --library <本地库目录> read <case_id>
+.venv\Scripts\python.exe scripts/reference_library.py --library <本地库目录> brief <request.json> --out <新任务目录>
+```
 
-## 说明与验证记录
+实际打开图片查看后，才填写观察、预览哈希和采用规则。读取图片字节不等于看图。缺少图片库要说明限制；参考图片不能代替真实数据、试件映射或发表授权。旧索引在审核修改后通过index --deep重建为schema2。
 
-- [模块介绍与安装说明](scientific-figure-optimizer/README.md)
-- [逐步使用流程](scientific-figure-optimizer/docs/WORKFLOW.md)
-- [完整教程及异常示例](scientific-figure-optimizer/docs/TUTORIAL.md)
-- [任务单字段与约束](scientific-figure-optimizer/references/task-contract.md)
-- [0.1.3验证与限制](scientific-figure-optimizer/docs/VALIDATION-0.1.3.md)
-- [修复状态](scientific-figure-optimizer/docs/RELEASE-0.1.3.md)
-- [Origin当前状态](scientific-figure-optimizer/references/origin-assessment.md)
-- [上传文件清单](UPLOAD_MANIFEST.json)与[文件哈希](RELEASE-SHA256SUMS.txt)
+## 给Agent的请求
 
-正式版本地43项测试通过，其中含使用既有原生PDF的只读检查。该PDF夹具没有打包；普通运行会明确跳过该可选项，其余42项可执行。需要重跑可选检查时，通过 SFO_NATIVE_TYPE3_PDF 显式指定相应合法夹具。不要把SKIP记作通过，也不要将字体资源检查解释为完整PDF标准合规。
+> 使用scientific-figure-optimizer，检查我的CSV与任务单，并连接我指定的本地参考库。先明确问题、读者、图型、尺寸与编辑要求，检索并实际查看相关案例，从两个来源采用规则生成Figure Brief。只执行获准的样式修改，保留数值及点序，交付SVG/PDF/PNG和复现资料，说明核查结果及作者待确认问题。
 
-## 隐私与许可
+> Use scientific-figure-optimizer to inspect my CSV and brief with my configured local reference library. Establish the scientific question, reader, figure type, size and editing needs. Retrieve and actually view relevant cases, adopting rules from two sources into a Figure Brief. Apply only authorized styling, preserve values and order, and deliver SVG/PDF/PNG with reproduction files, checks and pending author decisions.
 
-命令行绘图脚本没有上传输入的逻辑。输出快照会复制**完整CSV，包括未绘制的列**，来源和脚注也可能含私人信息。Agent打开文件或图件会将内容加入对话上下文；私有GitHub仓库也属于外部传输。共享前逐文件检查。
+## 教程、素材与证据
 
-本仓库示例只使用自编CC0教学数据，无私人研究数据、机台原始数据、第三方Origin工程或独立字体文件。代码及说明采用[MIT许可](scientific-figure-optimizer/LICENSE)，教学数据许可见[示例许可](scientific-figure-optimizer/examples/LICENSE)。
+- [模块说明](scientific-figure-optimizer/README.md)
+- [完整教程](scientific-figure-optimizer/docs/TUTORIAL.md)与[使用流程](scientific-figure-optimizer/docs/WORKFLOW.md)
+- [本地参考库规范](scientific-figure-optimizer/references/local-reference-library.md)
+- [68项测试的实际记录与限制](scientific-figure-optimizer/docs/VALIDATION-0.2.1.md)
+- [Origin作者确认及历史记录](scientific-figure-optimizer/references/origin-assessment.md)
+- [课程讲解图件素材与图注](scientific-figure-optimizer/docs/presentation-materials/README.md)：实际导出图件，不冒充界面截图
+- [拟上传文件清单](UPLOAD_MANIFEST.json)与[文件哈希](RELEASE-SHA256SUMS.txt)
+
+代码及说明采用MIT许可，自编教学数据为CC0。没有私人锚杆研究数据、第三方论文图片、私人案例库或字体文件。CLI脚本没有上传逻辑；Agent打开文件会将内容加入对话上下文，公开仓库上传会让文件对所有人可见。输出会复制完整CSV，包括未绘制的列，分享前逐文件检查。
