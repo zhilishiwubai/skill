@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "input": "independent.csv",
+  "provenance": {
+    "source": "Original seven-point synthetic fixture authored by the independent evaluator: signed response, constant and small-amplitude trajectories, including repeated and reversed x values. Values were manually prescribed for software testing, with no physical or experimental interpretation.",
+    "evidence_level": "synthetic_teaching",
+    "rights": "CC0-1.0",
+    "public_redistribution": true
+  },
+  "reader_question": "How do synthetic signed trajectories compare in source order?",
+  "claim": "Synthetic seven-point trajectories include repeated and reversed x; no physical interpretation.",
+  "must_keep": [
+    "Seven points per series in original order",
+    "Negative values",
+    "Repeated and reversed x",
+    "Unverified reference status"
+  ],
+  "allowed_style_changes": [
+    "width_mm",
+    "height_mm",
+    "dpi",
+    "font",
+    "font_pt",
+    "line_pt",
+    "colors",
+    "xlim",
+    "ylim"
+  ],
+  "processing": {
+    "method": "none"
+  },
+  "x": {
+    "column": "x",
+    "label": "Position",
+    "unit": "mm"
+  },
+  "series": [
+    {
+      "column": "a",
+      "label": "Response",
+      "unit": "N"
+    },
+    {
+      "column": "b",
+      "label": "Constant",
+      "unit": "N"
+    },
+    {
+      "column": "c",
+      "label": "Small",
+      "unit": "N"
+    }
+  ],
+  "style": {},
+  "note": "Synthetic independent fixture\nR is an unverified reference",
+  "acceptance": {
+    "formats": [
+      "svg",
+      "pdf",
+      "png"
+    ],
+    "human_review": [
+      "Verify teaching claim and units",
+      "Inspect final physical size and grayscale distinction",
+      "Confirm no experimental interpretation"
+    ]
+  },
+  "y_label": "Force",
+  "reference_lines": [
+    {
+      "x": 0.5,
+      "label": "R",
+      "source": "Independent synthetic choice",
+      "status": "UNVERIFIED"
+    }
+  ]
+}

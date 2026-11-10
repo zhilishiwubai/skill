@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "svg_numeric_readback": true,
+  "pdf_size_and_embedded_fonts": true,
+  "raster_dimensions": true,
+  "raster_dpi_and_physical_size": true,
+  "grayscale_file": true,
+  "hashes": true,
+  "all_points_visible": true,
+  "human_scientific_and_visual_review": "PENDING"
+}

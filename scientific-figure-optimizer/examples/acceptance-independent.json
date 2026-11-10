@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "input": "acceptance-independent.csv",
+  "provenance": {
+    "source": "Independently handwritten deterministic acceptance data, 10 records, no experimental or model meaning.",
+    "evidence_level": "synthetic_teaching",
+    "rights": "CC0-1.0",
+    "public_redistribution": true
+  },
+  "reader_question": "Are negative, reversed and duplicate source points preserved in a portable rendering?",
+  "claim": "All ten supplied points and their sequence are preserved; the data make no scientific claim.",
+  "must_keep": [
+    "All ten input records in their exact source order",
+    "Negative values, decreasing x and repeated points",
+    "Explicit mm and N units",
+    "Unplotted note column retained in source snapshot"
+  ],
+  "allowed_style_changes": [
+    "width_mm",
+    "height_mm",
+    "dpi",
+    "font",
+    "font_pt",
+    "line_pt",
+    "colors",
+    "xlim",
+    "ylim"
+  ],
+  "processing": {
+    "method": "none"
+  },
+  "x": {
+    "column": "x",
+    "label": "Position",
+    "unit": "mm"
+  },
+  "series": [
+    {
+      "column": "y_a",
+      "label": "Series A",
+      "unit": "N"
+    },
+    {
+      "column": "y_b",
+      "label": "Series B",
+      "unit": "N"
+    },
+    {
+      "column": "y_c",
+      "label": "Series C",
+      "unit": "N"
+    }
+  ],
+  "style": {
+    "width_mm": 140,
+    "height_mm": 100,
+    "dpi": 300,
+    "font": "DejaVu Sans",
+    "font_pt": 9,
+    "line_pt": 1.2,
+    "colors": [
+      "#005A9C",
+      "#B33A00",
+      "#447500"
+    ]
+  },
+  "note": "Deterministic test data; source order retained",
+  "acceptance": {
+    "formats": [
+      "svg",
+      "pdf",
+      "png"
+    ],
+    "human_review": [
+      "Confirm synthetic test meaning and explicit units",
+      "Inspect final physical size and grayscale distinction",
+      "Confirm reversed and duplicate points are intentional"
+    ]
+  },
+  "y_label": "Response"
+}

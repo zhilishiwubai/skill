@@ -1,0 +1,48 @@
+test_bad_style_types_values_and_authorization (test_adversarial.AdversarialTests.test_bad_style_types_values_and_authorization) ... ok
+test_cli_verification_failure_invalidates_previous_pass (test_adversarial.AdversarialTests.test_cli_verification_failure_invalidates_previous_pass) ... ok
+test_constant_negative_scientific_and_source_bytes (test_adversarial.AdversarialTests.test_constant_negative_scientific_and_source_bytes) ... ok
+test_csv_shape_and_finite_values (test_adversarial.AdversarialTests.test_csv_shape_and_finite_values) ... ok
+test_deleting_manifest_entry_cannot_hide_missing_required_file (test_adversarial.AdversarialTests.test_deleting_manifest_entry_cannot_hide_missing_required_file) ... ok
+test_duplicate_and_nonstandard_json_rejected (test_adversarial.AdversarialTests.test_duplicate_and_nonstandard_json_rejected) ... ok
+test_existing_output_is_preserved (test_adversarial.AdversarialTests.test_existing_output_is_preserved) ... ok
+test_export_failure_cleans_stage_and_figures (test_adversarial.AdversarialTests.test_export_failure_cleans_stage_and_figures) ... ok
+test_float_precision_collapse_and_underflow_rejected_without_edit (test_adversarial.AdversarialTests.test_float_precision_collapse_and_underflow_rejected_without_edit) ... ok
+test_missing_file_and_malformed_json_cli (test_adversarial.AdversarialTests.test_missing_file_and_malformed_json_cli) ... ok
+test_missing_font_and_long_text_fail_without_output (test_adversarial.AdversarialTests.test_missing_font_and_long_text_fail_without_output) ... ok
+test_png_dpi_readback_not_just_pixel_dimensions (test_adversarial.AdversarialTests.test_png_dpi_readback_not_just_pixel_dimensions) ... ok
+test_reproduction_font_hash_mismatch_stops (test_adversarial.AdversarialTests.test_reproduction_font_hash_mismatch_stops) ... ok
+test_required_delivery_files_missing_never_pass (test_adversarial.AdversarialTests.test_required_delivery_files_missing_never_pass) ... ok
+test_reverse_duplicate_points_survive_export (test_adversarial.AdversarialTests.test_reverse_duplicate_points_survive_export) ... ok
+test_svg_geometry_and_path_commands_checked_beyond_hash (test_adversarial.AdversarialTests.test_svg_geometry_and_path_commands_checked_beyond_hash) ... ok
+test_units_and_ambiguous_labels_rejected (test_adversarial.AdversarialTests.test_units_and_ambiguous_labels_rejected) ... ok
+test_unsupported_processing_stops (test_adversarial.AdversarialTests.test_unsupported_processing_stops) ... ok
+test_value_error_identifies_csv_location (test_adversarial.AdversarialTests.test_value_error_identifies_csv_location) ... ok
+test_wrong_field_types_rejected (test_adversarial.AdversarialTests.test_wrong_field_types_rejected) ... ok
+test_empty_and_cyclic_resources_terminate_without_font_claim (test_pdf_resources.PdfResourceTests.test_empty_and_cyclic_resources_terminate_without_font_claim) ... ok
+test_nested_unembedded_font_is_rejected (test_pdf_resources.PdfResourceTests.test_nested_unembedded_font_is_rejected) ... ok
+test_real_nested_embedded_fonts_pass_full_readback (test_pdf_resources.PdfResourceTests.test_real_nested_embedded_fonts_pass_full_readback) ... ok
+test_charprocs_embeds_font_without_fontdescriptor_and_allows_spacing_glyph (test_type3_fonts.Type3FontTests.test_charprocs_embeds_font_without_fontdescriptor_and_allows_spacing_glyph) ... ok
+test_empty_or_malformed_glyph_metrics_rejected (test_type3_fonts.Type3FontTests.test_empty_or_malformed_glyph_metrics_rejected) ... ok
+test_encoding_duplicates_bad_names_or_out_of_range_rejected (test_type3_fonts.Type3FontTests.test_encoding_duplicates_bad_names_or_out_of_range_rejected) ... ok
+test_glyph_named_resources_must_exist (test_type3_fonts.Type3FontTests.test_glyph_named_resources_must_exist) ... ok
+test_glyph_resources_can_be_font_local_or_inherited (test_type3_fonts.Type3FontTests.test_glyph_resources_can_be_font_local_or_inherited) ... ok
+test_missing_and_unsupported_encoding_rejected (test_type3_fonts.Type3FontTests.test_missing_and_unsupported_encoding_rejected) ... ok
+test_missing_empty_or_nonstream_charprocs_rejected (test_type3_fonts.Type3FontTests.test_missing_empty_or_nonstream_charprocs_rejected) ... ok
+test_nested_form_and_shared_cyclic_resources_terminate (test_type3_fonts.Type3FontTests.test_nested_form_and_shared_cyclic_resources_terminate) ... ok
+test_real_origin_pdf_type3_and_truetype_resources (test_type3_fonts.Type3FontTests.test_real_origin_pdf_type3_and_truetype_resources) ... ok
+test_required_metrics_and_width_array_structure_rejected (test_type3_fonts.Type3FontTests.test_required_metrics_and_width_array_structure_rejected) ... ok
+test_typetwo_glyph_missing_font_program_still_rejected (test_type3_fonts.Type3FontTests.test_typetwo_glyph_missing_font_program_still_rejected) ... ok
+test_long_note_fails_cleanly (test_workflow.WorkflowTests.test_long_note_fails_cleanly) ... ok
+test_missing_column_and_ragged_csv (test_workflow.WorkflowTests.test_missing_column_and_ragged_csv) ... ok
+test_missing_unit (test_workflow.WorkflowTests.test_missing_unit) ... ok
+test_multiline_note_and_reference_readback (test_workflow.WorkflowTests.test_multiline_note_and_reference_readback) ... ok
+test_preserve_unsorted_duplicates_and_tamper (test_workflow.WorkflowTests.test_preserve_unsorted_duplicates_and_tamper) ... ok
+test_reference_status_required (test_workflow.WorkflowTests.test_reference_status_required) ... ok
+test_reject_bad_input (test_workflow.WorkflowTests.test_reject_bad_input) ... ok
+test_scientific_change_rejected (test_workflow.WorkflowTests.test_scientific_change_rejected) ... ok
+test_unknown_field_and_unauthorized_style (test_workflow.WorkflowTests.test_unknown_field_and_unauthorized_style) ... ok
+
+----------------------------------------------------------------------
+Ran 43 tests in 15.577s
+
+OK
