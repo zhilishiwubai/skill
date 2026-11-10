@@ -1,0 +1,87 @@
+{
+  "tool_version": "0.1.3",
+  "python": "3.12.14",
+  "versions": {
+    "contourpy": "1.4.0",
+    "cycler": "0.12.1",
+    "fonttools": "4.68.0",
+    "kiwisolver": "1.5.1",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.4",
+    "packaging": "26.3",
+    "pillow": "13.0.0",
+    "pyparsing": "3.3.3",
+    "pypdf": "7.0.0",
+    "python-dateutil": "4.0.0",
+    "tzdata": "2026.6"
+  },
+  "source_sha256": "fd0afdc9a1ad1af85b3df22199247b16dd39a156066099b3a8b3110d145320a7",
+  "font_file_sha256": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
+  "font_family": "DejaVu Sans",
+  "platform": "win32",
+  "point_count_per_series": 41,
+  "series_count": 2,
+  "source_order_preserved": true,
+  "processing": {
+    "method": "none"
+  },
+  "xlim": [
+    -0.5,
+    10.5
+  ],
+  "ylim": [
+    -1.5,
+    31.5
+  ],
+  "axes_box_pt": [
+    68.03149606299213,
+    55.41732283464568,
+    255.1181102362205,
+    144.56692913385825
+  ],
+  "layout_checks": [
+    {
+      "dpi": 300,
+      "text_inside_canvas": true,
+      "legend_outside_data_axes": true
+    },
+    {
+      "dpi": 96,
+      "text_inside_canvas": true,
+      "legend_outside_data_axes": true
+    }
+  ],
+  "warnings": [],
+  "human_review": {
+    "status": "PENDING",
+    "checks": [
+      "Verify teaching claim and units",
+      "Inspect final physical size and grayscale distinction",
+      "Confirm no experimental interpretation"
+    ]
+  },
+  "editability": {
+    "script_and_csv": "VERIFIED",
+    "svg_text_and_paths": "VERIFIED",
+    "native_project": "NOT_TESTED",
+    "word_ole": "NOT_TESTED"
+  },
+  "limits": [
+    "Human scientific review pending",
+    "No journal compliance certification",
+    "No automatic aesthetic or color-vision pass",
+    "No statistical inference"
+  ],
+  "hashes": {
+    "brief.json": "fc06d805a569bcf1f33c823be77cfc71c4830fd997dc6b094ab72fdb6289e890",
+    "figure.pdf": "8440b858d984058244f0a3eb1b845a22f7358925ac044c64467a999a2d5895da",
+    "figure.png": "95b8ce86d4fb3af3c8cd1fb3704e8edd252f6e5fcb2d63d682dbfabfab228029",
+    "figure.py": "265d3e11e96c0bf5a252715244de9c1dc5d368a049d9bf7d22b9dad943e16965",
+    "figure.svg": "ba69eec39ffaa33e4af51d90736c531a04b6ebd8d31fd87e1e157d53632a0abb",
+    "final-size.png": "4aedc0fef4c061c0c71df91b29da025c73fb757ae03336b7cf4c767789cf5550",
+    "grayscale.png": "f9426caca578f710f8c10422463702cca396b808dba6fe708bcfeeba733d7089",
+    "REPRODUCE.md": "8f0a037f9110116371d1977eab479b6d7ab4b296b7053a1249d8176e139ecec3",
+    "requirements.txt": "26bc5f991297be816dcecca7e7059e1cb4ebafb81ce5c7561a664184e34dbbee",
+    "source.csv": "fd0afdc9a1ad1af85b3df22199247b16dd39a156066099b3a8b3110d145320a7"
+  }
+}

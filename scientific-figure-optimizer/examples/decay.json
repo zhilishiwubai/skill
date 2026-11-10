@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "input": "decay.csv",
+  "provenance": {
+    "source": "Original teaching formula exp(-t/3)*cos(2*pi*t). Not measured data.",
+    "evidence_level": "synthetic_teaching",
+    "rights": "CC0-1.0",
+    "public_redistribution": true
+  },
+  "reader_question": "How does a prescribed damped response change over time?",
+  "claim": "A synthetic exponential envelope decreases with time.",
+  "must_keep": [
+    "All points in source order",
+    "Explicit s and mm units",
+    "Teaching data status"
+  ],
+  "allowed_style_changes": [
+    "width_mm",
+    "height_mm",
+    "dpi",
+    "font",
+    "font_pt",
+    "line_pt",
+    "colors",
+    "xlim",
+    "ylim"
+  ],
+  "processing": {
+    "method": "none"
+  },
+  "x": {
+    "column": "time",
+    "label": "Time",
+    "unit": "s"
+  },
+  "series": [
+    {
+      "column": "amplitude",
+      "label": "Amplitude",
+      "unit": "mm"
+    }
+  ],
+  "style": {},
+  "note": "Synthetic teaching data",
+  "acceptance": {
+    "formats": [
+      "svg",
+      "pdf",
+      "png"
+    ],
+    "human_review": [
+      "Verify teaching claim and units",
+      "Inspect final physical size and grayscale distinction",
+      "Confirm no experimental interpretation"
+    ]
+  }
+}
