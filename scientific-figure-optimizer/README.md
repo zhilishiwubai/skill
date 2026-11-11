@@ -1,6 +1,6 @@
-# Scientific figure optimizer 0.2.1-local
+# Scientific figure optimizer 0.2.2-local
 
-新增本地科学图形参考检索、实际视觉审阅和 Figure Brief 工作流；CSV renderer 保持 0.1.3。将 CSV 科研曲线及任务单转换为可复现、可编辑的数据图。Agent 负责理解修改请求、建立任务单、解释诊断及组织人工核查，Python 程序负责保真绘图与确定性检查。
+新增8类中英双语科研制图提示词，接入已有的本地参考检索、实际视觉审阅和Figure Brief流程；CSV renderer保持0.1.3。将CSV科研曲线及任务单转换为可复现、可编辑的数据图。Agent负责理解修改请求、建立任务单、解释诊断及组织人工核查，Python程序负责保真绘图与确定性检查。
 
 ## 安装
 
@@ -15,6 +15,12 @@ python -m venv .venv
 安装器复制 SKILL.md、scripts、references、assets 到实际 CODEX_HOME 下的 skills/scientific-figure-optimizer。CODEX_HOME 未设置时使用用户目录中的 .codex。已存在的目标会报错，避免覆盖。重新打开会话以发现 skill。程序依赖安装在虚拟环境中，调用时选用该环境的 Python。
 
 安装器也复制 requirements-lock.txt 和 LICENSE。更新已有 skill 时，先将旧 skill 完整备份至其他目录，再用安装器安装到腾出的路径；不覆盖混合版本。仅依靠安装资源运行的模板是 `<skill目录>/assets/brief-template.json`，配套 CSV 也在 assets 中。
+
+## 按图型使用提示词
+
+读取[分类调用说明](references/prompt-routing.md)，将[共同任务模板](assets/prompts/common.md)与一个实际类别补充组合使用。八类为：定量曲线、结构/装配/剖面、机理/阶段、装置/边界、有限元模型/结果、科研流程、多面板对照、研究照片证据整理。每类均有中文和English版本，填写来源、科学问题、尺寸/编辑目标和允许修改范围后再调用。
+
+SKILL.md已加入按需读取入口。提示词不是图片工具授权，不新增后端。符合合同的CSV曲线可以执行；结构/机理/流程等当前交付方案，研究照片保持只读证据审阅。详细模板在assets/prompts，不包含私人论文图或案例卡。
 
 ## 完整教学案例
 
@@ -45,9 +51,7 @@ python -m venv .venv
 
 代码和独立编写的说明使用 MIT，公开示例 CSV 使用 CC0-1.0。第三方依赖保留各自许可，见 references/capabilities.md。未打包 R2 原文、论文图片、真实锚杆数据、Origin 工程或私人路径。真实研究案例应存放于仓库外的私有目录。
 
-仓库只是待审核内容。上传前列出具体文件、目标和可见范围并取得明确确认。
-
-本次发布候选目标为 `zhilishiwubai/skill`，2026-11-10实际读取到的可见性为public。文件清单确认前不上传或推送；本地私人图库、论文预览和研究数据不属于公开候选。
+0.2.2通用资源对应公开分支 `scientific-figure-optimizer-v0.2.2`；上传范围由本次文件清单限定。`0.2.2-local` 是Skill版本标识，私人图库与研究数据仍独立保存在本地，未随分支分发。更改公开范围前需重新取得授权。
 
 命令行脚本没有上传数据的逻辑，但交付目录包含完整 CSV（包括未绘制的列）、来源和任务说明。Agent 若打开私人数据或图件，其内容会进入对话上下文。不要把“程序在本机绘图”理解为“AI 服务永远接触不到输入”。共享、发给模型或上传 GitHub 前均需审核；私有仓库也属于外部传输。
 

@@ -1,9 +1,9 @@
 {
-  "version": "0.2.1-local",
-  "documentation_revision": "author-origin-confirmation",
+  "version": "0.2.2-local",
   "renderer_version": "0.1.3",
-  "upload_status": "LOCAL_CANDIDATE_AWAITING_EXACT_FILE_APPROVAL",
-  "note": "Public candidate allowlist; private library excluded; source manifest excludes itself",
+  "reference_tool_version": "1.1",
+  "upload_status": "PREPARED_FOR_AUTHORIZED_PUBLIC_BRANCH",
+  "note": "Preparation snapshot for scientific-figure-optimizer-v0.2.2; private library excluded; self manifest excluded",
   "files": [
     {
       "path": ".gitignore",
@@ -17,13 +17,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 9018,
-      "sha256": "6d6e9627941d58a836326d6e8208ff0859a4d61209005fa792d23c99527958a6"
+      "bytes": 9763,
+      "sha256": "ab12e5d180b55d30bff1854358abd6cb9778c902271fc90f8639b0034247bf05"
     },
     {
       "path": "SKILL.md",
-      "bytes": 6824,
-      "sha256": "a73638322e4b0801971b1ec93553fe243203201112e270edf253cc8102419243"
+      "bytes": 7490,
+      "sha256": "028d4b6448df888a179ece3a39ea293abea5da56cb967bb8263819bbc3135328"
     },
     {
       "path": "assets/LICENSE-DATA",
@@ -34,6 +34,51 @@
       "path": "assets/brief-template.json",
       "bytes": 1425,
       "sha256": "ccc88f02762232adbd71ea7e30246bd6cf7f507a8442e987ca0fd8b01e6980a5"
+    },
+    {
+      "path": "assets/prompts/apparatus.md",
+      "bytes": 2796,
+      "sha256": "f96b5b04aba23a2c4908928079f806d71d512d92d236ece91494973feb7ef67b"
+    },
+    {
+      "path": "assets/prompts/common.md",
+      "bytes": 5854,
+      "sha256": "1e9ab9ed60d7c150f329ada223a4f1522ae04a9c778163e4fc0d60346c1fcf2a"
+    },
+    {
+      "path": "assets/prompts/curves.md",
+      "bytes": 3371,
+      "sha256": "b8abce3692249d8f0627c8c5ada5ddbaf371178257d1ae6df29e965a78477ce1"
+    },
+    {
+      "path": "assets/prompts/evidence-photo.md",
+      "bytes": 3134,
+      "sha256": "91eda26e83737815754385e3ab5a841256eccead46c0dfb8d5097a94cfde7c4f"
+    },
+    {
+      "path": "assets/prompts/fe-model.md",
+      "bytes": 3063,
+      "sha256": "bea088024070b298817cfc1ee2f87a0bc23de85806ce7d0cc5d98e6b807d66fc"
+    },
+    {
+      "path": "assets/prompts/mechanism.md",
+      "bytes": 2771,
+      "sha256": "cb54eb908109dc63e79a6f6818fba10ba2fd942389652cd81a409f0ddfad08fc"
+    },
+    {
+      "path": "assets/prompts/multipanel.md",
+      "bytes": 3068,
+      "sha256": "411e564f340f2d8d1ea053b388087ca036e15eedf1df00c884daf1788b1dd345"
+    },
+    {
+      "path": "assets/prompts/structure.md",
+      "bytes": 3068,
+      "sha256": "54d8355d7c1adf9a495cbc1dcf2a76e86ec7548863be83da2b7040243de32581"
+    },
+    {
+      "path": "assets/prompts/workflow.md",
+      "bytes": 2730,
+      "sha256": "26c9005740e7a0f0df2dc129a198669cf3006ee096d755479d556e200275968e"
     },
     {
       "path": "assets/reference-case-template.json",
@@ -71,9 +116,14 @@
       "sha256": "d120345586361dc9c14fd62967238ec1c65de0337e1cc74731a927d722a0b310"
     },
     {
+      "path": "docs/RELEASE-0.2.2-local.md",
+      "bytes": 1558,
+      "sha256": "292a14632fb0688b086a42837c12198144a5af87f2dc4c16c1ea83bf5f358b3e"
+    },
+    {
       "path": "docs/TUTORIAL.md",
-      "bytes": 4877,
-      "sha256": "aaa26ff4cee4359714b17c79e02282158e827446d94ac45c56e0a55f3cabf4bc"
+      "bytes": 5194,
+      "sha256": "97debbeb190ab1cd91c0af2a3f87cc923d13e8bb905b94b7fb7032b7c93a066e"
     },
     {
       "path": "docs/VALIDATION-0.1.3.md",
@@ -84,6 +134,11 @@
       "path": "docs/VALIDATION-0.2.1.md",
       "bytes": 1508,
       "sha256": "a82db61fe0bcce1c263c5ba4f8d7561f5173894a7f40d40df8a79e5eff8b7733"
+    },
+    {
+      "path": "docs/VALIDATION-0.2.2.md",
+      "bytes": 2316,
+      "sha256": "2c77fe483efd5f757e85668ed6a6497fda191225c19533d08bb98986740185ac"
     },
     {
       "path": "docs/WORKFLOW.md",
@@ -367,13 +422,18 @@
     },
     {
       "path": "references/local-reference-library.md",
-      "bytes": 7689,
-      "sha256": "54a25d736f2181100a69b1ee29908307a5754388ecbb457ff0e164290cc40a49"
+      "bytes": 7942,
+      "sha256": "d87ad98085bfe1422d850959e75609188eab5c536367eaefd5c577eb0a1cf41c"
     },
     {
       "path": "references/origin-assessment.md",
       "bytes": 4260,
       "sha256": "506d84e306e0d693547bc286af893e2e05b78939ef3b236cafcd6657877b93fa"
+    },
+    {
+      "path": "references/prompt-routing.md",
+      "bytes": 5092,
+      "sha256": "f7a5eff1a6e2be152e8ba7dc04b3c83e00b97dcaa22328873c977ff76e6c0341"
     },
     {
       "path": "references/task-contract.md",

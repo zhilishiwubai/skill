@@ -1,6 +1,6 @@
 # 科研制图 Skill
 
-本仓库提供scientific-figure-optimizer 0.2.1-local：根据明确来源和单位的CSV绘制可复现数据图，并通过本地参考案例检索、实际看图与规则提炼生成Figure Brief。这里的学习是运行时参考，不是模型训练。
+本仓库提供scientific-figure-optimizer 0.2.2-local：根据明确来源和单位的CSV绘制可复现数据图，并通过本地参考案例检索、实际看图与规则提炼生成Figure Brief。这里的学习是运行时参考，不是模型训练。
 
 ## 当前能力
 
@@ -17,10 +17,10 @@
 
 ## 安装与运行
 
-准备Python3.12和Git。本候选拟发布到scientific-figure-optimizer-v0.2.1分支，main与既有分支保持原状。
+准备Python3.12和Git。本版使用scientific-figure-optimizer-v0.2.2分支，main与旧版分支保持原状。
 
 ```powershell
-git clone --branch scientific-figure-optimizer-v0.2.1 https://github.com/zhilishiwubai/skill.git
+git clone --branch scientific-figure-optimizer-v0.2.2 https://github.com/zhilishiwubai/skill.git
 cd skill/scientific-figure-optimizer
 python --version
 python -m venv .venv
@@ -53,6 +53,21 @@ python -m venv .venv
 
 实际打开图片查看后，才填写观察、预览哈希和采用规则。读取图片字节不等于看图。缺少图片库要说明限制；参考图片不能代替真实数据、试件映射或发表授权。旧索引在审核修改后通过index --deep重建为schema2。
 
+## 按图型选择提示词
+
+先读[分类说明](scientific-figure-optimizer/references/prompt-routing.md)，复制[共同模板](scientific-figure-optimizer/assets/prompts/common.md)，再补充实际图型。每份均有中文和English版本。
+
+- [定量曲线](scientific-figure-optimizer/assets/prompts/curves.md)
+- [结构、装配与剖面](scientific-figure-optimizer/assets/prompts/structure.md)
+- [机理与阶段](scientific-figure-optimizer/assets/prompts/mechanism.md)
+- [试验装置与加载边界](scientific-figure-optimizer/assets/prompts/apparatus.md)
+- [有限元模型与结果](scientific-figure-optimizer/assets/prompts/fe-model.md)
+- [科研流程](scientific-figure-optimizer/assets/prompts/workflow.md)
+- [多面板对照](scientific-figure-optimizer/assets/prompts/multipanel.md)
+- [研究照片证据](scientific-figure-optimizer/assets/prompts/evidence-photo.md)
+
+混合图组合实际面板类型。填写真实数据、来源、尺寸和允许改动后，先检索与看图，再提炼规则和形成Figure Brief；缺资料保留缺口。合格CSV仍可独立绘制并明确未采用参考，其他类别依现有能力交付方案。模板不授予图片工具权限，也不新增绘图后端。见[本轮验证范围](scientific-figure-optimizer/docs/VALIDATION-0.2.2.md)。
+
 ## 给Agent的请求
 
 > 使用scientific-figure-optimizer，检查我的CSV与任务单，并连接我指定的本地参考库。先明确问题、读者、图型、尺寸与编辑要求，检索并实际查看相关案例，从两个来源采用规则生成Figure Brief。只执行获准的样式修改，保留数值及点序，交付SVG/PDF/PNG和复现资料，说明核查结果及作者待确认问题。
@@ -67,6 +82,6 @@ python -m venv .venv
 - [68项测试的实际记录与限制](scientific-figure-optimizer/docs/VALIDATION-0.2.1.md)
 - [Origin作者确认及历史记录](scientific-figure-optimizer/references/origin-assessment.md)
 - [课程讲解图件素材与图注](scientific-figure-optimizer/docs/presentation-materials/README.md)：实际导出图件，不冒充界面截图
-- [拟上传文件清单](UPLOAD_MANIFEST.json)与[文件哈希](RELEASE-SHA256SUMS.txt)
+- [分支发布文件清单](UPLOAD_MANIFEST.json)与[文件哈希](RELEASE-SHA256SUMS.txt)
 
 代码及说明采用MIT许可，自编教学数据为CC0。没有私人锚杆研究数据、第三方论文图片、私人案例库或字体文件。CLI脚本没有上传逻辑；Agent打开文件会将内容加入对话上下文，公开仓库上传会让文件对所有人可见。输出会复制完整CSV，包括未绘制的列，分享前逐文件检查。

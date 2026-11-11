@@ -1,5 +1,7 @@
 # 从请求到可复现图件
 
+新任务先使用[按图型提示词](../references/prompt-routing.md)：读取共同模板，再组合实际图型补充。八类模板均为中英双语；它们帮助填写科学约束、检索需求和Figure Brief，不改变下述严格CSV接口，也不自动执行结构绘制、照片编辑或FE求解。
+
 1. 明确读者要理解的问题。教学 spring 示例比较两条自定义线性关系，单位为 mm、N，不赋予实验含义。
 2. 打开 CSV 核对列名、数据点数量和单位，填写 JSON 的 provenance、reader_question、claim、must_keep。复制模板后逐项重写来源、公式、单位与必须保留项，不能沿用与新数据不符的教学公式。程序只能检查声明的结构，不能验证其真实性。将修改请求落实为 allowed_style_changes 和 style。
 3. 运行 README 中 check。输入检查通过后执行 render 到全新目录。程序记录输入哈希，保留源文件字节及点序。

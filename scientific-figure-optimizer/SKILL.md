@@ -2,10 +2,14 @@
 name: scientific-figure-optimizer
 description: Retrieve and visually review local scientific figure references, turn transferable rules into a Figure Brief, and optimize CSV line plots with provenance, preserved points, editable SVG and export checks. Use for scientific figure planning and quantitative curve styling; diagram planning does not imply a drawing backend.
 metadata:
-  version: 0.2.1-local
+  version: 0.2.2-local
 ---
 
 # Scientific figure optimizer
+
+## Figure-type prompts
+
+Before composing a request or Figure Brief, read [prompt routing](references/prompt-routing.md). Classify by scientific purpose and actual inputs, then read `assets/prompts/common.md` and only the applicable type supplement: curves, structure, mechanism, apparatus, FE model/results, workflow, multipanel, or research-photo evidence. Fill known facts rather than repeating questions; combine actual panel types for composites. Templates guide runtime decisions and do not grant image-tool permission or add rendering, CAD, simulation or native-project capabilities. Use the route's supported scope and disclose plans/limitations explicitly.
 
 ## Reference-guided planning
 
